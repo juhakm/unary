@@ -1,0 +1,13 @@
+include *.py
+include *.md
+include *.yml
+include Makefile
+include LICENSE.md
+include README.md
+
+# Exclude 
+global-exclude __pycache__/*
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude *~
+global-exclude \#*

@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+packages = ["unary"]
+
+[tool.setuptools.package-data]
+"unary" = ["py.typed"]
+
+[project]
+name = "unary"
+version = "0.1.0"
+description = "Unary arithmetic"
+readme = {file = "README.md", content-type = "text/markdown"}
+requires-python = ">=3.8"
+license = "MIT"
+keywords = ["unary", "arithmetic", "calculus", "math"]
+authors = [
+  {name = "J Meskanen", email = "juha@meskanen.com"}
+]
+maintainers = [
+  {name = "J. Meskanen", email = "juha@meskanen.com"}
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Education",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Scientific/Engineering :: Mathematics",
+  "Topic :: Scientific/Engineering :: Physics",
+  "Topic :: Education",
+  "Topic :: Libraries :: Python Modules",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+  "Typing :: Typed",
+]
+
+dependencies = [
+  "requests >= 2.31",
+  "pytz >= 2024.1",
+  "colorama >= 0.3",
+  "typing-extensions >= 4.5.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "check-manifest",
+  "flake8", "mypy",
+  "coverage>=7.6",
+  "pytest-cov",
+  "types-colorama",
+]
+
+[project.entry-points."unary.plugins"]
+
+[project.urls]
+"Homepage" = "https://github.com/juhameskanen/unary"
+"Bug Reports" = "https://gitlab.com/juhameskanen/unary"
+"Source" = "https://gitlab.com/juhameskanen/unary"
+"Say Thanks!" = "http://meskanen.com"
+
+[tool.mypy]
+files = "unary, tests"
+ignore_missing_imports = true
